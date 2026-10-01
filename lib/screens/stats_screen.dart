@@ -50,8 +50,8 @@ class _StatsScreenState extends State<StatsScreen> {
             onPressed: () async {
               final val = int.tryParse(controller.text) ?? 15;
               await widget.vocabService.setDailyTarget(val);
-              Navigator.pop(ctx);
-              setState(() {});
+              if (ctx.mounted) Navigator.pop(ctx);
+              if (mounted) setState(() {});
             },
             child: const Text('Kaydet', style: TextStyle(fontWeight: FontWeight.bold)),
           ),

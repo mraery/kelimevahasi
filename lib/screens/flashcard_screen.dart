@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../models/word.dart';
 import '../services/vocab_service.dart';
 
 class FlashcardScreen extends StatefulWidget {
